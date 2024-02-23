@@ -6,10 +6,10 @@ import Link from 'next/link'
 import Logo from './Logo'
 // import Dropdown from '@/components/utils/dropdown'
 import MobileMenu from './MobileMenu'
-// import { UserButton, auth } from '@clerk/nextjs'
+import { UserButton, auth } from '@clerk/nextjs'
 
 export default function Header() {
-  // const { userId } = auth()
+  const { userId } = auth()
 
   // const [top, setTop] = useState<boolean>(true)
   const top = false
@@ -118,18 +118,20 @@ export default function Header() {
                   Sign in
                 </Link>
               </li> */}
-              {/* <li>
-                {!userId ? (
-                  <Link
-                    href='/sign-in'
-                    className='ml-3 text-gray-200 bg-gray-900 btn-sm hover:bg-gray-800'
-                  >
-                    <span>Sign in</span>
-                  </Link>
-                ) : (
-                  <UserButton />
-                )}
-              </li> */}
+              {
+                <li>
+                  {!userId ? (
+                    <Link
+                      href='/sign-in'
+                      className='ml-3 text-gray-200 bg-gray-900 btn-sm hover:bg-gray-800'
+                    >
+                      <span>Sign in</span>
+                    </Link>
+                  ) : (
+                    <UserButton />
+                  )}
+                </li>
+              }
             </ul>
           </nav>
 

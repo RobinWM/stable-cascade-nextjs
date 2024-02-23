@@ -11,7 +11,6 @@ export default authMiddleware({
     '/sign-in',
     '/sign-up',
   ],
-  debug: true,
 })
 
 export const config = {
