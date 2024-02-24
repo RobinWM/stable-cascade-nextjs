@@ -110,14 +110,14 @@ export default function Header() {
 
             {/* Desktop sign in links */}
             <ul className='flex flex-wrap items-center justify-end grow'>
-              <li>
+              {/* <li>
                 <Link
                   href='/signin'
                   className='flex items-center px-5 py-3 font-medium text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'
                 >
                   Sign in
                 </Link>
-              </li>
+              </li> */}
               {
                 <li>
                   {!userId ? (
