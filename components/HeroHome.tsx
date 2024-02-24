@@ -55,8 +55,8 @@ export default function HeroHome() {
                 data-aos='zoom-y-out'
                 data-aos-delay='150'
               >
-                The first foundation model for generative video based on the
-                image model Stable Diffusion.
+                The first foundation model for generative image based on the
+                image model Stable Cascade.
               </p>
 
               <div
