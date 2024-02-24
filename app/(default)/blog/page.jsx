@@ -3,9 +3,14 @@ import PostItem from '@/components/PostItem'
 import PopularPosts from './popular-posts'
 import Topics from './topics'
 
-export const metadata = {
-  title: 'Blog - Simple',
-  description: 'Page description',
+import { getSEOTags } from '@/libs/seo'
+import config from '@/config'
+
+export async function generateMetadata() {
+  return getSEOTags({
+    title: `Blog | ${config.appName}`,
+    canonicalUrlRelative: `/blog`,
+  })
 }
 
 export default function Blog() {
