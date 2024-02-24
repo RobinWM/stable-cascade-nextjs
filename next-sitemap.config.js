@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://stablecascade.net/',
+  siteUrl: process.env.SITE_URL || 'https://soraai.tech/',
   generateRobotsTxt: true,
   exclude: [
     '/twitter-image.*',
@@ -15,12 +15,12 @@ module.exports = {
       '/terms-of-service',
       '/faq',
       '/blog',
-      '/blog/what-is-stable-cascade',
+      '/blog/what-is-sora-ai',
     ]
     console.log(`additionalPaths`, config)
     return paths.map(path => {
       return {
-        loc: `https://stablecascade.net${path}`,
+        loc: `https://soraai.tech${path}`,
         lastmod: new Date().toISOString(),
         priority: 0.7,
         changefreq: 'daily',
