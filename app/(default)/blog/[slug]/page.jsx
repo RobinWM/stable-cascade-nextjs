@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
   return getSEOTags({
     title: `${title} | ${config.appName}`,
     description,
-    canonicalUrlRelative: `/blog/${title}`,
+    canonicalUrlRelative: `/blog/${params.slug}`,
   })
 }
 
