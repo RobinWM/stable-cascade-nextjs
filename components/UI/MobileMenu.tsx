@@ -5,7 +5,7 @@ import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 import { UserButton } from '@clerk/nextjs'
 
-export default function MobileMenu({ userId }: { userId: string }) {
+export default function MobileMenu({ userId }: { userId: string | null }) {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
 
   const trigger = useRef<HTMLButtonElement>(null)
