@@ -1,11 +1,10 @@
 const config = {
-  appName: 'StableCascade',
-  appTitle:
-    'stable cascade,stable cascade free,text to image,ai generator free',
+  appName: 'SoraAITech',
+  appTitle: 'Sora AI,Sora AI free,Sora prompts,text to video,ai generator free',
   appDescription:
-    'Stable Cascade in its research preview. This innovative text to image model introduces an interesting three-stage approach, setting new benchmarks for quality, flexibility, fine-tuning, and efficiency with a focus on further eliminating hardware barriers.',
-  domainName: 'stablecascade.net',
-  appKeywords: ['stable cascade', 'text to image'],
+    'SoraAITech is a free tools for text to video with the sora of openai.',
+  domainName: 'soraai.tech',
+  appKeywords: ['Sora AI', 'text to video', 'sora prompts'],
   crisp: {
     id: '',
     onlyShowOnRoutes: ['/'],
@@ -67,8 +66,8 @@ const config = {
   },
   mailgun: {
     subdomain: 'mg',
-    fromNoReply: `TTS.Tools <noreply@mg.shipfa.st>`,
-    fromAdmin: `Marc at TTS.Tools <marc@mg.shipfa.st>`,
+    fromNoReply: `soraai.tech <noreply@mg.shipfa.st>`,
+    fromAdmin: `Marc at soraai.tech <marc@mg.shipfa.st>`,
     supportEmail: 'robinw@mail.texttospeech.tools',
     forwardRepliesTo: 'v517649974769@gmail.com',
   },

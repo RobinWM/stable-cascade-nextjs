@@ -1,20 +1,20 @@
 ---
-title: 'What Is Stable Cascade'
+title: 'What Is Sora AI'
 publishedAt: '2024-01-11'
-summary: 'In this post, you will learn you will learn what is the Stable Cascade and how to use it.Just enjoy, thanks.'
+summary: 'In this post, you will learn you will learn what is the Sora AI and how to use it.Just enjoy, thanks.'
 author: 'Stability AI'
-authorImg: '/images/what-is-stable-cascade.png'
+authorImg: '/images/what-is-sora-ai.png'
 ---
 
 <Image alt='Blog Main' src={`/images/blog_main.jpg`} width={768} height={432} />
 
-This is the official codebase for **Stable Cascade**. We provide training & inference scripts, as well as a variety of different models you can use.
+This is the official codebase for **Sora AI**. We provide training & inference scripts, as well as a variety of different models you can use.
 
-This model is built upon the [Würstchen](https://openreview.net/forum?id=gU58d5QeGv) architecture and its main difference to other models, like Stable Diffusion, is that it is working at a much smaller latent space. Why is this important? The smaller the latent space, the **faster** you can run inference and the **cheaper** the training becomes. How small is the latent space? Stable Diffusion uses a compression factor of 8, resulting in a 1024x1024 image being encoded to 128x128. Stable Cascade achieves a compression factor of 42, meaning that it is possible to encode a 1024x1024 image to 24x24, while maintaining crisp reconstructions. The text-conditional model is then trained in the highly compressed latent space. Previous versions of this architecture, achieved a 16x cost reduction over Stable Diffusion 1.5.
+This model is built upon the [Würstchen](https://openreview.net/forum?id=gU58d5QeGv) architecture and its main difference to other models, like Stable Diffusion, is that it is working at a much smaller latent space. Why is this important? The smaller the latent space, the **faster** you can run inference and the **cheaper** the training becomes. How small is the latent space? Stable Diffusion uses a compression factor of 8, resulting in a 1024x1024 image being encoded to 128x128. Sora AI achieves a compression factor of 42, meaning that it is possible to encode a 1024x1024 image to 24x24, while maintaining crisp reconstructions. The text-conditional model is then trained in the highly compressed latent space. Previous versions of this architecture, achieved a 16x cost reduction over Stable Diffusion 1.5.
 
 Therefore, this kind of model is well suited for usages where efficiency is important. Furthermore, all known extensions like finetuning, LoRA, ControlNet, IP-Adapter, LCM etc. are possible with this method as well. A few of those are already provided (finetuning, ControlNet, LoRA) in the [training](train) and [inference](inference) sections.
 
-Moreover, Stable Cascade achieves impressive results, both visually and evaluation wise. According to our evaluation, Stable Cascade performs best in both prompt alignment and aesthetic quality in almost all comparisons. The above picture shows the results from a human evaluation using a mix of parti-prompts (link) and aesthetic prompts. Specifically, Stable Cascade (30 inference steps) was compared against Playground v2 (50 inference steps), SDXL (50 inference steps), SDXL Turbo (1 inference step) and Würstchen v2 (30 inference steps).
+Moreover, Sora AI achieves impressive results, both visually and evaluation wise. According to our evaluation, Sora AI performs best in both prompt alignment and aesthetic quality in almost all comparisons. The above picture shows the results from a human evaluation using a mix of parti-prompts (link) and aesthetic prompts. Specifically, Sora AI (30 inference steps) was compared against Playground v2 (50 inference steps), SDXL (50 inference steps), SDXL Turbo (1 inference step) and Würstchen v2 (30 inference steps).
 
 <Image
   alt='Blog Comparison'
@@ -23,7 +23,7 @@ Moreover, Stable Cascade achieves impressive results, both visually and evaluati
   height={432}
 />
 
-Stable Cascade´s focus on efficiency is evidenced through its architecture and a higher compressed latent space. Despite the largest model containing 1.4 billion parameters more than Stable Diffusion XL, it still features faster inference times, as can be seen in the figure below.
+Sora AI´s focus on efficiency is evidenced through its architecture and a higher compressed latent space. Despite the largest model containing 1.4 billion parameters more than Stable Diffusion XL, it still features faster inference times, as can be seen in the figure below.
 
 <Image
   alt='Blog Comparison'
@@ -43,7 +43,7 @@ Stable Cascade´s focus on efficiency is evidenced through its architecture and 
 
 ## Model Overview
 
-Stable Cascade consists of three models: Stage A, Stage B and Stage C, representing a cascade for generating images, hence the name "Stable Cascade". Stage A & B are used to compress images, similarly to what the job of the VAE is in Stable Diffusion. However, as mentioned before, with this setup a much higher compression of images can be achieved. Furthermore, Stage C is responsible for generating the small 24 x 24 latents given a text prompt. The following picture shows this visually. Note that Stage A is a VAE and both Stage B & C are diffusion models.
+Sora AI consists of three models: Stage A, Stage B and Stage C, representing a cascade for generating images, hence the name "Sora AI". Stage A & B are used to compress images, similarly to what the job of the VAE is in Stable Diffusion. However, as mentioned before, with this setup a much higher compression of images can be achieved. Furthermore, Stage C is responsible for generating the small 24 x 24 latents given a text prompt. The following picture shows this visually. Note that Stage A is a VAE and both Stage B & C are diffusion models.
 
 <Image
   alt='Blog Comparison'
@@ -56,7 +56,7 @@ For this release, we are providing two checkpoints for Stage C, two for Stage B 
 
 ## Getting Started
 
-This section will briefly outline how you can get started with **Stable Cascade**.
+This section will briefly outline how you can get started with **Sora AI**.
 
 ### Inference
 
@@ -101,7 +101,7 @@ the documentation and usage [here](https://huggingface.co/stabilityai/stable-cas
 
 #### ControlNet
 
-This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that were trained by us or how to use one that you trained yourself for Stable Cascade. With this release, we provide the following ControlNets:
+This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that were trained by us or how to use one that you trained yourself for Sora AI. With this release, we provide the following ControlNets:
 
 - Inpainting / Outpainting
   <Image
@@ -140,7 +140,7 @@ This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that we
 
   #### LoRA
 
-We also provide our own implementation for training and using LoRAs with Stable Cascade, which can be used to finetune the text-conditional model (Stage C). Specifically, you can add and learn new tokens and add LoRA layers to the model. This [notebook](inference/lora.ipynb) shows how you can use a trained LoRA. For example, training a LoRA on my dog with the following kind of training images:
+We also provide our own implementation for training and using LoRAs with Sora AI, which can be used to finetune the text-conditional model (Stage C). Specifically, you can add and learn new tokens and add LoRA layers to the model. This [notebook](inference/lora.ipynb) shows how you can use a trained LoRA. For example, training a LoRA on my dog with the following kind of training images:
 
 <Image
   alt='Blog Comparison'
@@ -160,7 +160,7 @@ Lets me generate the following images of my dog given the prompt: `Cinematic pho
 
 #### Image Reconstruction
 
-Lastly, one thing that might be very interesting for people, especially if you want to train your own text-conditional model from scratch, maybe even with a completely different architecture than our Stage C, is to use the (Diffusion) Autoencoder that Stable Cascade uses to be able to work in the highly compressed space. Just like people use Stable Diffusion's VAE to train their own models (e.g. Dalle3), you could use Stage A & B in the same way, while benefiting from a much higher compression, allowing you to train and run models faster.
+Lastly, one thing that might be very interesting for people, especially if you want to train your own text-conditional model from scratch, maybe even with a completely different architecture than our Stage C, is to use the (Diffusion) Autoencoder that Sora AI uses to be able to work in the highly compressed space. Just like people use Stable Diffusion's VAE to train their own models (e.g. Dalle3), you could use Stage A & B in the same way, while benefiting from a much higher compression, allowing you to train and run models faster.
 
 The notebook shows how to encode and decode images and what specific benefits you get. For example, say you have the following batch of images of dimension `4 x 3 x 1024 x 1024`:
 
@@ -184,7 +184,7 @@ As you can see, the reconstructions are surprisingly close, even for small detai
 
 ### Training
 
-We provide code for training Stable Cascade from scratch, finetuning, ControlNet and LoRA. You can find a comprehensive explanation for how to do so in the [training folder](train).
+We provide code for training Sora AI from scratch, finetuning, ControlNet and LoRA. You can find a comprehensive explanation for how to do so in the [training folder](train).
 
 ## Remarks
 

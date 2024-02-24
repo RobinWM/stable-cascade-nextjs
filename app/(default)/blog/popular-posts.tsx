@@ -2,7 +2,7 @@ export default function PopularPosts() {
   return (
     <div className='mb-8'>
       <h4 className='mb-4 text-lg font-bold leading-snug tracking-tight'>
-        Popular on Simple
+        Popular on SoraAI
       </h4>
       <ul className='-my-2'>
         <li className='flex py-2 border-b border-gray-200'>
@@ -15,17 +15,14 @@ export default function PopularPosts() {
           </svg>
           <article>
             <h3 className='mb-1 font-medium'>
-              <a
-                href='/blog/what-is-stable-cascade'
-                className='hover:underline'
-              >
-                What Is Stable Cascade
+              <a href='/blog/what-is-sora-ai' className='hover:underline'>
+                What Is Sora AI
               </a>
             </h3>
             <div className='text-sm text-gray-800'>
               <span className='text-gray-600'>By </span>
               <a className='font-medium hover:underline' href='#0'>
-                StabilityAI
+                Openai
               </a>
             </div>
           </article>

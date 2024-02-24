@@ -43,9 +43,9 @@ export default function HeroHome() {
               className='mb-4 text-5xl font-extrabold tracking-tighter md:text-6xl leading-tighter'
               data-aos='zoom-y-out'
             >
-              <h2 className='block'>Stable Cascade</h2>
+              <h2 className='block'>Sora AI</h2>
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400'>
-                a wonderful image generator model
+                a wonderful video generator model
               </span>
             </span>
 
@@ -55,8 +55,8 @@ export default function HeroHome() {
                 data-aos='zoom-y-out'
                 data-aos-delay='150'
               >
-                The first foundation model for generative image based on the
-                image model Stable Cascade.
+                The first foundation model for generative video based on the
+                video model openai's sora.
               </p>
 
               <div

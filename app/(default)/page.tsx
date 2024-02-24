@@ -29,7 +29,7 @@ export default function Home() {
 
       <RelatedTweets />
 
-      <GetStarted />
+      {/* <GetStarted /> */}
 
       <section id='faq'>
         <FAQ />

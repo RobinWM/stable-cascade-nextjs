@@ -3,19 +3,19 @@ export default function FeaturesBlocks() {
     <section className='relative'>
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div
-        className='absolute inset-0 bg-gray-900 pointer-events-none top-1/2 md:mt-24 lg:mt-0'
+        className='absolute inset-0 bg-gray-900 pointer-events-none top-1/2 md:mt-12 lg:mt-0'
         aria-hidden='true'
       ></div>
       <div className='absolute bottom-0 left-0 right-0 w-px h-20 p-px m-auto transform translate-y-1/2 bg-gray-200'></div>
 
       <div className='relative max-w-6xl px-4 mx-auto sm:px-6'>
-        <div className='py-12 md:py-20'>
+        <div className='py-2 md:py-6'>
           {/* Section header */}
           <div className='max-w-3xl pb-12 mx-auto text-center md:pb-20'>
-            <h2 className='mb-4 h2'>Stable Cascade Basic Features</h2>
+            <h2 className='mb-4 h2'>Sora AI Basic Features</h2>
             <p className='text-xl text-gray-600'>
-              The model provides you with basic functionality for text-to-image,
-              image-variation and image-to-image.
+              The model provides you with basic functionality for text-to-video,
+              image-to-video and video-to-video.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function FeaturesBlocks() {
                 </g>
               </svg>
               <h3 className='mb-1 text-xl font-bold leading-snug tracking-tight'>
-                Text-to-Image
+                Text-To-Video
               </h3>
               <p className='text-center text-gray-600'>
                 It's the basic feature.
@@ -99,7 +99,7 @@ export default function FeaturesBlocks() {
                 </g>
               </svg>
               <h3 className='mb-1 text-xl font-bold leading-snug tracking-tight'>
-                Image Variation
+                Image-To-Video
               </h3>
               <p className='text-center text-gray-600'>
                 The model can also understand image embeddings, which makes it
@@ -144,7 +144,7 @@ export default function FeaturesBlocks() {
                 </g>
               </svg>
               <h3 className='mb-1 text-xl font-bold leading-snug tracking-tight'>
-                Image-to-Image
+                Video-To-Video
               </h3>
               <p className='text-center text-gray-600'>
                 This works just as usual, by noising an image up to a specific

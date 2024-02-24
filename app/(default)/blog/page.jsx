@@ -2,7 +2,6 @@ import { allPosts } from 'contentlayer/generated'
 import PostItem from '@/components/PostItem'
 import PopularPosts from './popular-posts'
 import Topics from './topics'
-
 import { getSEOTags } from '@/libs/seo'
 import config from '@/config'
 
@@ -25,9 +24,9 @@ export default function Blog() {
         <div className='pt-32 pb-12 md:pt-40 md:pb-20'>
           {/* Page header */}
           <div className='max-w-3xl pb-12 text-center md:pb-20 md:text-left'>
-            <h1 className='mb-4 h1'>Stable Cascade blog</h1>
+            <h1 className='mb-4 h1'>Sora AI blog</h1>
             <p className='text-xl text-gray-600'>
-              Get the latest information of Stable Cascade model from here.
+              Get the latest information of Sora AI model from here.
             </p>
           </div>
 
