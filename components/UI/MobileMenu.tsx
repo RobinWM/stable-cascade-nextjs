@@ -3,9 +3,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
-// import { UserButton } from '@clerk/nextjs'
+import { UserButton } from '@clerk/nextjs'
 
-export default function MobileMenu() {
+export default function MobileMenu({ userId }: { userId: string }) {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
 
   const trigger = useRef<HTMLButtonElement>(null)
@@ -154,19 +154,16 @@ export default function MobileMenu() {
               </ul>
             </li> */}
 
-            {/* <li>
-              {!useId ? (
-                <Link
-                  href='/signin'
-                  className='flex justify-center w-full py-2 font-medium text-gray-600 hover:text-gray-900'
-                  onClick={() => setMobileNavOpen(false)}
-                >
+            <li>
+              {!userId ? (
+                <Link href='/sign-in' onClick={() => setMobileNavOpen(false)}>
                   Sign in
                 </Link>
               ) : (
                 <UserButton />
               )}
-            </li> */}
+            </li>
+
             {/* <li>
               <Link
                 href='/signup'
