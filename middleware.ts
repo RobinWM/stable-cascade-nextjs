@@ -7,7 +7,7 @@ export default authMiddleware({
     '/terms-of-service',
     '/faq',
     '/blog',
-    '/blog/what-is-stable-cascade',
+    '/blog/what-is-sora-ai',
     '/sign-in',
     '/sign-up',
   ],
