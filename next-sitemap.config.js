@@ -1,6 +1,6 @@
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://soraai.tech/',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   exclude: [
     '/twitter-image.*',
     '/opengraph-image.*',

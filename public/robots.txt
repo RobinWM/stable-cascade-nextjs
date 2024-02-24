@@ -1,9 +1,14 @@
-# *
-User-agent: *
-Allow: /
+User-Agent: *
+Allow: *
+Disallow: /api
+Disallow: /api/
+Disallow: /api*
+Disallow: /*/api
+Disallow: /*/api/
+Disallow: /*/api*
 
 # Host
-Host: https://stablecascade.net/
+Host: https://soraai.tech/
 
 # Sitemaps
-Sitemap: https://stablecascade.net/sitemap.xml
+Sitemap: https://soraai.tech/sitemap.xml
