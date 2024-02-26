@@ -64,6 +64,15 @@ export const getSEOTags = ({
     alternates: {
       canonical: `https://${config.domainName}${canonicalUrlRelative || ''}`,
     },
+    icons: {
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/favicon-16x16.png', sizes: '16x16' },
+        { url: '/favicon-32x32.png', sizes: '32x32' },
+      ],
+      shortcut: ['/shortcut-icon.png'],
+      apple: [{ url: '/apple-touch-icon.png' }],
+    },
 
     // If you want to add extra tags, you can pass them here
     ...extraTags,
