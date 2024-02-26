@@ -2,7 +2,7 @@ export default function PopularPosts() {
   return (
     <div className='mb-8'>
       <h4 className='mb-4 text-lg font-bold leading-snug tracking-tight'>
-        Popular on Simple
+        Popular on Stable Cascade
       </h4>
       <ul className='-my-2'>
         <li className='flex py-2 border-b border-gray-200'>
