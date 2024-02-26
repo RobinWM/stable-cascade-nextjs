@@ -1,8 +1,8 @@
 const config = {
-  appName: 'SoraAITech',
+  appName: 'SoraAI',
   appTitle: 'Sora AI,Sora AI free,Sora prompts,text to video,ai generator free',
   appDescription:
-    'SoraAITech is a free tools for text to video with the sora of openai.',
+    'SoraAI is a free tools for text to video with the sora of openai.',
   domainName: 'soraai.tech',
   appKeywords: ['Sora AI', 'text to video', 'sora prompts'],
   crisp: {
