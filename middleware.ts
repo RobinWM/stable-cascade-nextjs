@@ -10,7 +10,8 @@ export default authMiddleware({
     // '/blog/**',
     '/sign-in',
     '/sign-up',
-    /^\/blog\/*/,
+    '/blog/what-is-stable-cascade',
+    '/blog/why-is-stable-cascade-better',
   ],
 })
 
