@@ -7,9 +7,10 @@ export default authMiddleware({
     '/terms-of-service',
     '/faq',
     '/blog',
-    '/blog/what-is-stable-cascade',
+    // '/blog/**',
     '/sign-in',
     '/sign-up',
+    /^\/blog\/*/,
   ],
 })
 

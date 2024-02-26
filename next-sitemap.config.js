@@ -16,6 +16,7 @@ module.exports = {
       '/faq',
       '/blog',
       '/blog/what-is-stable-cascade',
+      '/blog/why-is-stable-cascade-better',
     ]
     console.log(`additionalPaths`, config)
     return paths.map(path => {
