@@ -15,7 +15,10 @@ export default function PopularPosts() {
           </svg>
           <article>
             <h3 className='mb-1 font-medium'>
-              <a href='#0' className='hover:underline'>
+              <a
+                href='/blog/what-is-stable-cascade'
+                className='hover:underline'
+              >
                 What Is Stable Cascade
               </a>
             </h3>

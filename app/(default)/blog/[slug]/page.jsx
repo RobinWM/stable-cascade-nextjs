@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { allPosts } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
@@ -7,34 +6,30 @@ import PostDate from '@/components/PostDate'
 import MDX from '@/components/MDX/index'
 import PostNav from './post-nav'
 
+import { getSEOTags } from '@/libs/seo'
+import config from '@/config'
+
 export async function generateStaticParams() {
   return allPosts.map(post => ({
     slug: post.slug,
   }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}): Promise<Metadata | undefined> {
+export async function generateMetadata({ params }) {
   const post = allPosts.find(post => post.slug === params.slug)
 
   if (!post) return
 
   const { title, summary: description } = post
 
-  return {
-    title,
+  return getSEOTags({
+    title: `${title} | ${config.appName}`,
     description,
-  }
+    canonicalUrlRelative: `/blog/${params.slug}`,
+  })
 }
 
-export default async function SinglePost({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default async function SinglePost({ params }) {
   const post = allPosts.find(post => post.slug === params.slug)
 
   if (!post) notFound()

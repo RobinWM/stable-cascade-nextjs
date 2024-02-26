@@ -32,7 +32,9 @@
     ".next/types/**/*.ts",
     ".contentlayer/generated",
     "app/(default)/(legal)/privacy-policy/page.jsx",
-    "app/(default)/faq/page.jsx"
+    "app/(default)/faq/page.jsx",
+    "app/(default)/blog/page.jsx",
+    "app/(default)/blog/[slug]/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
