@@ -17,7 +17,7 @@ Therefore, this kind of model is well suited for usages where efficiency is impo
 Moreover, Stable Cascade achieves impressive results, both visually and evaluation wise. According to our evaluation, Stable Cascade performs best in both prompt alignment and aesthetic quality in almost all comparisons. The above picture shows the results from a human evaluation using a mix of parti-prompts (link) and aesthetic prompts. Specifically, Stable Cascade (30 inference steps) was compared against Playground v2 (50 inference steps), SDXL (50 inference steps), SDXL Turbo (1 inference step) and Würstchen v2 (30 inference steps).
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade Blog Comparison'
   src={`/images/blog1_comparison.png`}
   width={768}
   height={432}
@@ -26,7 +26,7 @@ Moreover, Stable Cascade achieves impressive results, both visually and evaluati
 Stable Cascade´s focus on efficiency is evidenced through its architecture and a higher compressed latent space. Despite the largest model containing 1.4 billion parameters more than Stable Diffusion XL, it still features faster inference times, as can be seen in the figure below.
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade comparison-inference-speed'
   src={`/images/comparison-inference-speed.jpg`}
   width={768}
   height={432}
@@ -35,7 +35,7 @@ Stable Cascade´s focus on efficiency is evidenced through its architecture and 
 <hr />
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade collage'
   src={`/images/collage_2.jpg`}
   width={768}
   height={432}
@@ -46,7 +46,7 @@ Stable Cascade´s focus on efficiency is evidenced through its architecture and 
 Stable Cascade consists of three models: Stage A, Stage B and Stage C, representing a cascade for generating images, hence the name "Stable Cascade". Stage A & B are used to compress images, similarly to what the job of the VAE is in Stable Diffusion. However, as mentioned before, with this setup a much higher compression of images can be achieved. Furthermore, Stage C is responsible for generating the small 24 x 24 latents given a text prompt. The following picture shows this visually. Note that Stage A is a VAE and both Stage B & C are diffusion models.
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade model overview'
   src={`/images/model-overview.jpg`}
   width={768}
   height={432}
@@ -71,7 +71,7 @@ A compact [notebook](https://github.com/Stability-AI/StableCascade/blob/master/i
 `Cinematic photo of an anthropomorphic penguin sitting in a cafe reading a book and having a coffee.`
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade text-to-image-example-penguin'
   src={`/images/text-to-image-example-penguin.jpg`}
   width={768}
   height={432}
@@ -81,7 +81,7 @@ A compact [notebook](https://github.com/Stability-AI/StableCascade/blob/master/i
 The model can also understand image embeddings, which makes it possible to generate variations of a given image (left). There was no prompt given here.
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade image-variations-example-headset'
   src={`/images/image-variations-example-headset.jpg`}
   width={768}
   height={432}
@@ -91,7 +91,7 @@ The model can also understand image embeddings, which makes it possible to gener
 This works just as usual, by noising an image up to a specific point and then letting the model generate from that starting point. Here the left image is noised to 80% and the caption is: `A person riding a rodent.`
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade image-to-image-example-rodent'
   src={`/images/image-to-image-example-rodent.jpg`}
   width={768}
   height={432}
@@ -105,7 +105,7 @@ This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that we
 
 - Inpainting / Outpainting
   <Image
-    alt='Blog Comparison'
+    alt='Stable Cascade controlnet-paint'
     src={`/images/controlnet-paint.jpg`}
     width={768}
     height={432}
@@ -113,7 +113,7 @@ This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that we
 - Face Identity
 
   <Image
-    alt='Blog Comparison'
+    alt='Stable Cascade controlnet-face'
     src={`/images/controlnet-face.jpg`}
     width={768}
     height={432}
@@ -122,7 +122,7 @@ This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that we
 
 - Canny
   <Image
-    alt='Blog Comparison'
+    alt='Stable Cascade controlnet-canny'
     src={`/images/controlnet-canny.jpg`}
     width={768}
     height={432}
@@ -130,7 +130,7 @@ This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that we
 - Super Resolution
 
   <Image
-    alt='Blog Comparison'
+    alt='Stable Cascade controlnet-sr'
     src={`/images/controlnet-sr.jpg`}
     width={768}
     height={432}
@@ -143,7 +143,7 @@ This [notebook](inference/controlnet.ipynb) shows how to use ControlNets that we
 We also provide our own implementation for training and using LoRAs with Stable Cascade, which can be used to finetune the text-conditional model (Stage C). Specifically, you can add and learn new tokens and add LoRA layers to the model. This [notebook](inference/lora.ipynb) shows how you can use a trained LoRA. For example, training a LoRA on my dog with the following kind of training images:
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade fernando_original'
   src={`/images/fernando_original.jpg`}
   width={768}
   height={432}
@@ -152,7 +152,7 @@ We also provide our own implementation for training and using LoRAs with Stable 
 Lets me generate the following images of my dog given the prompt: `Cinematic photo of a dog [fernando] wearing a space suit.`
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade fernando'
   src={`/images/fernando.jpg`}
   width={768}
   height={432}
@@ -165,7 +165,7 @@ Lastly, one thing that might be very interesting for people, especially if you w
 The notebook shows how to encode and decode images and what specific benefits you get. For example, say you have the following batch of images of dimension `4 x 3 x 1024 x 1024`:
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade original'
   src={`/images/original.jpg`}
   width={768}
   height={432}
@@ -174,7 +174,7 @@ The notebook shows how to encode and decode images and what specific benefits yo
 You can encode these images to a compressed size of `4 x 16 x 24 x 24`, giving you a spatial compression factor of `1024 / 24 = 42.67`. Afterwards you can use Stage A & B to decode the images back to `4 x 3 x 1024 x 1024`, giving you the following output:
 
 <Image
-  alt='Blog Comparison'
+  alt='Stable Cascade reconstructed'
   src={`/images/reconstructed.jpg`}
   width={768}
   height={432}
