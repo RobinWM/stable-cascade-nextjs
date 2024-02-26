@@ -7,11 +7,10 @@ export default authMiddleware({
     '/terms-of-service',
     '/faq',
     '/blog',
-    // '/blog/**',
-    '/sign-in',
-    '/sign-up',
     '/blog/what-is-stable-cascade',
     '/blog/why-is-stable-cascade-better',
+    '/sign-in',
+    '/sign-up',
   ],
 })
 
