@@ -39,10 +39,7 @@ export default function HeroHome() {
         <div className='pt-32 pb-12 md:pt-40 md:pb-20'>
           {/* Section header */}
           <div className='pb-12 text-center md:pb-16'>
-            <span
-              className='mb-4 text-5xl font-extrabold tracking-tighter md:text-6xl leading-tighter'
-              data-aos='zoom-y-out'
-            >
+            <span className='mb-4 text-5xl font-extrabold tracking-tighter md:text-6xl leading-tighter'>
               <h2 className='block'>Stable Cascade</h2>
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400'>
                 a wonderful image generator model
@@ -50,20 +47,12 @@ export default function HeroHome() {
             </span>
 
             <div className='max-w-3xl mx-auto mt-8'>
-              <p
-                className='mb-8 text-xl text-gray-600'
-                data-aos='zoom-y-out'
-                data-aos-delay='150'
-              >
+              <p className='mb-8 text-xl text-gray-600'>
                 The first foundation model for generative image based on the
                 image model Stable Cascade.
               </p>
 
-              <div
-                className='max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center'
-                data-aos='zoom-y-out'
-                data-aos-delay='300'
-              >
+              <div className='max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center'>
                 <div>
                   <Link
                     className='w-full mb-4 text-white bg-blue-600 btn hover:bg-blue-700 sm:w-auto sm:mb-0'
